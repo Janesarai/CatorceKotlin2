@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FBFDE1"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/bienvenido"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="16dp"
+        android:background="#44684F"
+        android:gravity="center"
+        android:text="Bienvendio sl banco Awake Lab"
+        android:textColor="#FFFCDF"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/monto"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:ems="10"
+        android:hint="Monto"
+        android:inputType="number"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardViewOpciones" />
+
+    <Button
+        android:id="@+id/buttonOk"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#67CDDA"
+        android:text="Ok"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/monto"
+        app:layout_constraintStart_toStartOf="@+id/monto"
+        app:layout_constraintTop_toBottomOf="@+id/monto" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewOpciones"
+        android:layout_width="337dp"
+        android:layout_height="196dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bienvenido"
+        app:layout_constraintVertical_bias="0.18">
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/verSaldo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ver Saldo" />
+
+            <RadioButton
+                android:id="@+id/ingresar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ingresar" />
+
+            <RadioButton
+                android:id="@+id/retirar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Retirar" />
+
+            <RadioButton
+                android:id="@+id/salir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Salir" />
+        </RadioGroup>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
